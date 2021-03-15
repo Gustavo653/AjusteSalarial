@@ -8,6 +8,8 @@ namespace AjusteSalarial
         {
             Console.Write("Insira seu salário bruto: ");
             double salario = double.Parse(Console.ReadLine());
+            Console.Write("Insira quantas horas você trabalha por mês: ");
+            int horas = int.Parse(Console.ReadLine());
             Console.Write("Insira a quantidade de horas extras feitas em sábados: ");
             int hExtraSabado = int.Parse(Console.ReadLine());
             Console.Write("Insira a quantidade de horas extras feitas em dias de semana: ");
