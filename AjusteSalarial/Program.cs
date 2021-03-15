@@ -1,4 +1,5 @@
 ﻿using System;
+using AjusteSalarial.Entities;
 
 namespace AjusteSalarial
 {
@@ -14,6 +15,8 @@ namespace AjusteSalarial
             int hExtraSabado = int.Parse(Console.ReadLine());
             Console.Write("Insira a quantidade de horas extras feitas em dias de semana: ");
             int hExtraSemana = int.Parse(Console.ReadLine());
+            Ajuste ajuste = new Ajuste(salario, hExtraSabado, hExtraSemana, horas);
+            Console.WriteLine(ajuste.ToString());
         }
     }
 }
