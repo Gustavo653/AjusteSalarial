@@ -114,10 +114,10 @@ namespace AjusteSalarial.Entities
             SalarioLiquido = SalarioLiquido + (HESab + HESem);
             double IR = AjusteIR(SalarioLiquido);
             SalarioLiquido = SalarioLiquido - IR;
-            return $"\n Seu salário bruto é de: {Salario} \n Seu salário hora é de: {salarioHora} " +
-                $"\n O valor do INSS é de: {INSS} \n O valor do IR é de: {IR} \n O valor do seu FGTS é de: {FGTS}" +
-                $"\n Suas horas extras em sábados foram de: {HESab} e de dias de semana foram de: {HESem}" +
-                $"\n O valor do seu vale transporte foi de: {ValTrans} \n Seu salário líquido foi de: {SalarioLiquido}";
+            return $"\n Seu salário bruto é de: R${Salario} \n Seu salário hora é de: R${salarioHora.ToString("F2")} " +
+                $"\n O valor do INSS é de: R${INSS.ToString("F2")} \n O valor do IR é de: R${IR.ToString("F2")} \n O valor do seu FGTS é de: R${FGTS.ToString("F2")}" +
+                $"\n Suas horas extras em sábados foram de: R${HESab.ToString("F2")} e de dias de semana foram de: R${HESem.ToString("F2")}" +
+                $"\n O valor do seu vale transporte foi de: R${ValTrans.ToString("F2")} \n Seu salário líquido é de: R${SalarioLiquido.ToString("F2")}";
         }
     }
 }

@@ -7,7 +7,7 @@ namespace AjusteSalarial
     {
         static void Main(string[] args)
         {
-            Console.Write("Insira seu salário bruto: ");
+            Console.Write("Insira seu salário bruto: R$");
             double salario = double.Parse(Console.ReadLine());
             Console.Write("Insira quantas horas você trabalha por mês: ");
             int horas = int.Parse(Console.ReadLine());
