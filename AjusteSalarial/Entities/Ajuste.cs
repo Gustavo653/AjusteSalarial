@@ -19,13 +19,13 @@ namespace AjusteSalarial.Entities
             Horas = horas;
         }
 
-        public double SalarioHora(double salario, int horas)
+        public double SalarioHora(double salario, int horas) //Calcula o salário hora
         {
             double salarioHora;
             salarioHora = (salario * 12) / (52 * horas);
-            return salarioHora;
+            return salarioHora; 
         }
-        public double AjusteINSS(double salario)
+        public double AjusteINSS(double salario) //Calcula o valor do INSS
         {
             //INSS
             double INSS;
@@ -50,7 +50,7 @@ namespace AjusteSalarial.Entities
                 return INSS;
             }
         }
-        public double AjusteIR(double salario)
+        public double AjusteIR(double salario) //Calcula o valor do IR
         {
             double IR;
             if (salario <= 1903.99)
@@ -78,31 +78,31 @@ namespace AjusteSalarial.Entities
                 return IR;
             }
         }
-        public double AjusteFGTS(double salario)
+        public double AjusteFGTS(double salario) //Calcula o valor do FGTS
         {
             double FGTS = salario * 0.03;
             return FGTS;
         }
-        public double AjusteHoraExtraSabado(int hExtraSabado)
+        public double AjusteHoraExtraSabado(int hExtraSabado) //Calcula o valor das horas extras
         {
             double salarioHora = SalarioHora(Salario, Horas);
             salarioHora = salarioHora * 1.1;
             return salarioHora;
         }
-        public double AjusteHoraExtraSemana(int hExtraSemana)
+        public double AjusteHoraExtraSemana(int hExtraSemana) //Calcula o valor das horas extras
         {
             double salarioHora = SalarioHora(Salario, Horas);
             salarioHora = salarioHora * 0.5;
             return salarioHora;
         }
-        public double ValeTransporte(double salario)
+        public double ValeTransporte(double salario) //Calcula o valor do vale transporte
         {
             double valeTransporte;
             valeTransporte = salario * 0.06;
             return valeTransporte;
         }
 
-        public override string ToString()
+        public override string ToString() //Faz o cálculo do salário líquido e mostra o resultado formatado
         {
             double salarioHora = SalarioHora(Salario, Horas);
             double INSS = AjusteINSS(Salario);
